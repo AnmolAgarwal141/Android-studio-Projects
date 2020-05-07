@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="Answer_text">My Favourite color is Blue?</string>
+    <string name="Que2">My Favourite Sport is  Cricket?</string>
+    <string name="Que3">My most used App is Facebook?</string>
+    <string name="Correct">That\'s Correct</string>
+    <string name="Incorrect">That\'s Incorrect</string>
+    <string name="True_Button_text">TRUE</string>
+    <string name="False_Button_text">False</string>
+    <string name="Next_text">Next</string>
+    <string name="Prev_text">Previous</string>
+</resources>

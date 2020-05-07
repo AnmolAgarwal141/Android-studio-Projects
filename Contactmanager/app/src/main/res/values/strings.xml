@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Contactmanager</string>
+    <string name="db.drop">DROP TABLE IF EXISTS</string>
+</resources>

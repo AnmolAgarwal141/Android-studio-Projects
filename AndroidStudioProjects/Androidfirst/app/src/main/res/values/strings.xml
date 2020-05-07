@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android first</string>
+    <string name="Enter_name">Enter Name</string>
+    <string name="show_name">Show Name</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_flight"
+        android:icon="@drawable/baseline_event_black_24dp"
+        android:title="Bookings" />
+
+    <item
+        android:id="@+id/navigation_Todo"
+        android:icon="@drawable/baseline_list_black_24dp"
+        android:title="To Do List" />
+    <item
+        android:id="@+id/navigation_moneymanager"
+        android:icon="@drawable/baseline_attach_money_black_24dp"
+        android:title="Money Manager" />
+    <item
+        android:id="@+id/navigation_Profile"
+        android:icon="@drawable/baseline_account_circle_black_24dp"
+        android:title="Profile" />
+
+</menu>
