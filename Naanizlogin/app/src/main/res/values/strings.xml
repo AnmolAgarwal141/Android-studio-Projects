@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Naanizlogin</string>
+    <string name="button_signup_login_restaurant">Sign Up/Login as Restaurant</string>
+    <string name="button_signup_login_customer">Sign Up/Login as Customer</string>
+    <string name="phone_number_edittext">Phone number</string>
+    <string name="btn_login">Login</string>
+    <string name="full_name_edittext">Full Name</string>
+    <string name="signup_btn_txt">Sign Up</string>
+    <string name="terms_and_conditions_checkbox">Terms and conditions</string>
+    <string name="let_s_set_up_your_profile">Let\'s set up your profile!</string>
+    <string name="description_profile_setup">Let us know about your preferences,\nfor a truly personalized experience with\nNaaniz</string>
+    <string name="next_btn_txt">Next</string>
+    <string name="hint_resource">Select State</string>
+</resources>

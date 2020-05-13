@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="180dp"
+        android:src="@drawable/app_icon"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="280dp"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/button_signup_login_restaurant"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:background="@drawable/mybutton"
+        android:textColor="@android:color/white"
+ />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/button_signup_login_customer"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</LinearLayout>

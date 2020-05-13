@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OrderFood</string>
+    <string name="main_text">Welcome to the OrderFood App</string>
+    <string name="edittextemail">Enter Email Address</string>
+    <string name="button_login_text">Login</string>
+    <string name="edittextpass">Enter Password</string>
+    <string name="signupbuttontext">Don\'t Have a Account , Sign Up</string>
+    <string name="checkboxtext">   Use Order Food For Business</string>
+    <string name="Button_text_create_account">Create Account</string>
+</resources>

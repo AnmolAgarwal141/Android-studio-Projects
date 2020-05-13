@@ -1,4 +1,4 @@
-package com.example.self;
+package com.example.orderfood;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,14 +8,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,133 +26,125 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.Date;
 import java.util.Objects;
 
-import model.Journal;
-import util.JournalApi;
+import model.Restaurant;
+import util.OrderFoodApi;
 
-public class PostJournalActivity extends AppCompatActivity implements View.OnClickListener {
+public class Restaurantdetail extends AppCompatActivity implements View.OnClickListener {
+    private ImageView restaurantimage;
+    private EditText restaurantname,restaurantaddress;
     private Button savebutton;
-    private ProgressBar progressBar;
-    private ImageView addphotobutton,imageView;
-    private EditText titleedittext,thoughtedittext;
-    private String currentuserid;
-    private String currentusername;
+    private String currentuserid,currentAccounttype;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseUser user;
     private FirebaseFirestore db=FirebaseFirestore.getInstance();
     private StorageReference storageReference;
-    private TextView CurrentUserTextView;
-    private CollectionReference collectionReference=db.collection("Journal");
+    private CollectionReference collectionReference=db.collection("Restaurant");
     private static  final int GALLERY_CODE=1;
     private Uri imageUri;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post_journal);
+        setContentView(R.layout.activity_restaurantdetail);
         Objects.requireNonNull(getSupportActionBar()).setElevation(0);
 
         firebaseAuth=FirebaseAuth.getInstance();
-        progressBar=findViewById(R.id.postprogressBar);
-        titleedittext=findViewById(R.id.posttitleet);
-        thoughtedittext=findViewById(R.id.postthoughtet);
-        CurrentUserTextView=findViewById(R.id.postusernametextview);
-        imageView=findViewById(R.id.postimageView);
+        restaurantaddress =findViewById(R.id.restaurantaddress);
+        restaurantname=findViewById(R.id.restaurantname);
+        restaurantimage=findViewById(R.id.restaurantimageview);
+        savebutton=findViewById(R.id.savebutton);
         storageReference= FirebaseStorage.getInstance().getReference();
 
-        savebutton=findViewById(R.id.postsavejournalbutton);
         savebutton.setOnClickListener(this);
-        addphotobutton=findViewById(R.id.postcamerabutton);
-        addphotobutton.setOnClickListener(this);
-        progressBar.setVisibility(View.INVISIBLE);
+        restaurantimage.setOnClickListener(this);
 
-        if(JournalApi.getInstance()!=null){
-            currentuserid=JournalApi.getInstance().getUserid();
-            currentusername=JournalApi.getInstance().getUsername();
-            CurrentUserTextView.setText(currentusername);
+        if(OrderFoodApi.getInstance()!=null){
+            currentuserid=OrderFoodApi.getInstance().getUserid();
+            currentAccounttype=OrderFoodApi.getInstance().getAccountype();
         }
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-               user=firebaseAuth.getCurrentUser();
-               if(user!=null){
+                user=firebaseAuth.getCurrentUser();
+                if(user!=null){
 
-               }
-               else {
+                }
+                else {
 
-               }
+                }
             }
         };
-
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.postcamerabutton:
+            case R.id.restaurantimageview:
                 Intent galleryintent=new Intent(Intent.ACTION_GET_CONTENT);
                 galleryintent.setType("image/*");
                 startActivityForResult(galleryintent,GALLERY_CODE);
                 break;
-            case R.id.postsavejournalbutton:
-                saveJournal();
+            case R.id.savebutton:
+                saverestaurant();
                 break;
         }
+
     }
-    private void saveJournal(){
-        final String Title=titleedittext.getText().toString().trim();
-        final String Thoughts=thoughtedittext.getText().toString().trim();
-        progressBar.setVisibility(View.VISIBLE);
-        if(!TextUtils.isEmpty(Title)&& !TextUtils.isEmpty(Thoughts)&&imageUri!=null){
-            final StorageReference filepath=storageReference.child("journal_images").child("image_"+ Timestamp.now().getSeconds());
+
+    private void saverestaurant() {
+        final String restaurantnm=restaurantname.getText().toString().trim();
+        final String restaurantadd=restaurantaddress.getText().toString().trim();
+        if(!TextUtils.isEmpty(restaurantnm)&&!TextUtils.isEmpty(restaurantadd)&&imageUri!=null){
+            final StorageReference filepath=storageReference.child("Restaurant_image").child("image_"+ Timestamp.now().getSeconds());
             filepath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
                     filepath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
                             String imageurl=uri.toString();
-                            Journal journal=new Journal();
-                            journal.setTitle(Title);
-                            journal.setThought(Thoughts);
-                            journal.setImageUri(imageurl);
-                            journal.setTimeadded(new Timestamp(new Date()));
-                            journal.setUsername(currentusername);
-                            journal.setUserid(currentuserid);
+                            Restaurant restaurant=new Restaurant();
+                            restaurant.setResImageuri(imageurl);
+                            restaurant.setRestaurantaddress(restaurantadd);
+                            restaurant.setRestaurantname(restaurantnm);
+                            restaurant.setUserid(currentuserid);
+                            restaurant.setAccountType(currentAccounttype);
 
-
-                            collectionReference.add(journal).addOnSuccessListener(  new OnSuccessListener<DocumentReference>() {
+                            collectionReference.add(restaurant).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
-                                    progressBar.setVisibility(View.INVISIBLE);
-                                    startActivity(new Intent(PostJournalActivity.this,JournalListActivity.class));
+                                    //startActivity(new Intent(Restaurantdetail.this, Restaurant.class));
                                     finish();
+
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Log.d("activitypostjournal","on failure"+e.toString());
+
                                 }
                             });
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
                         }
                     });
-
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                  progressBar.setVisibility(View.INVISIBLE);
+
                 }
             });
+
         }
-        else {
-            progressBar.setVisibility(View.INVISIBLE);
-        }
+
     }
 
     @Override
@@ -179,7 +168,7 @@ public class PostJournalActivity extends AppCompatActivity implements View.OnCli
         if(requestCode==GALLERY_CODE && resultCode==RESULT_OK){
             if(data!=null){
                 imageUri=data.getData();
-                imageView.setImageURI(imageUri);
+                restaurantimage.setImageURI(imageUri);
             }
         }
     }

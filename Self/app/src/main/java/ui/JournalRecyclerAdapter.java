@@ -23,10 +23,10 @@ public class JournalRecyclerAdapter extends RecyclerView.Adapter<JournalRecycler
    private Context context;
    private List<Journal> journalList;
 
-    public JournalRecyclerAdapter(Context context, List<Journal> journalList) {
-        this.context = context;
-        this.journalList = journalList;
-    }
+        public JournalRecyclerAdapter(Context context, List<Journal> journalList) {
+            this.context = context;
+            this.journalList = journalList;
+        }
 
     @NonNull
     @Override
