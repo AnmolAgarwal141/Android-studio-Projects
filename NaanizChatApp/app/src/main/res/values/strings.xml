@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NaanizChatApp</string>
+    <string name="channel_name">chat</string>
+    <string name="channel_description">chat app notification</string>
+</resources>
