@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Name: __Test_Restaurant__"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/restaurant_location"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Location: __Test_Location_"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/restaurant_name"/>
+
+    <Button
+        android:id="@+id/swiggy_redirect"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="Swiggy"
+        android:layout_toRightOf="@id/restaurant_name"
+        android:layout_marginStart="15dp"
+        android:textSize="10dp"/>
+
+    <Button
+        android:id="@+id/zomato_redirect"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="Zomato"
+        android:layout_toRightOf="@id/restaurant_name"
+        android:layout_below="@id/swiggy_redirect"
+        android:layout_marginStart="15dp"
+        android:textSize="10dp"/>
+
+
+
+
+</RelativeLayout>

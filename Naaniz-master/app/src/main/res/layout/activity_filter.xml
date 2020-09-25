@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".FilterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="5dp">
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/back_button"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR ALL"
+            android:textColor="#D43B3B"
+            android:layout_marginStart="120dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F1EEEE">
+
+
+            <TextView
+                android:id="@+id/prices"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="5dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Prices" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"/>
+            <TextView
+                android:id="@+id/taste"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:textColor="#000"
+                android:elevation="5dp"
+                android:paddingTop="15dp"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:text="Taste" />
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/choices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/options"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/options"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="APPLY"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle2"
+            style="@style/searches_all"
+            android:layout_marginRight="20dp"
+            android:id="@+id/apply"
+            android:layout_marginBottom="20dp"/>
+    </RelativeLayout>
+</LinearLayout>

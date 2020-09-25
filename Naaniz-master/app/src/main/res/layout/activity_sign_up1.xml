@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SignUp1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-99dp"
+        android:layout_marginStart="-125dp"
+        android:src="@drawable/ellipse1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/signup1"
+        android:layout_marginTop="-230dp"
+        android:layout_marginStart="22dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_details"
+        style="@style/enter_name"
+        android:layout_marginStart="28dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar"
+        android:layout_marginStart="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Name"
+        style="@style/name"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="28dp"/>
+
+    <EditText
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_name"
+        android:inputType="textCapWords"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-38dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_pref"
+        style="@style/name"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="28dp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/food_choice_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/veg"
+        android:textOff="@string/veg"
+        android:textOn="@string/non_veg"
+        android:textSize="20sp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="-28dp"
+        android:theme="@style/food_switch_style" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle2"
+        style="@style/login"
+        android:text="Restaurant Owner"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp" />
+
+    <Button
+        android:id="@+id/vendorSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle2"
+        style="@style/login"
+        android:text="Customer"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"/>
+
+
+</LinearLayout>

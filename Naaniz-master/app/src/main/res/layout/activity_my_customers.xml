@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyCustomersActivity">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="26dp"/>
+
+    <TextView
+        android:id="@+id/my_customers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_toEndOf="@id/backButton"
+        android:text="SHOPPING"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/my_menu"
+        android:gravity="top" />
+
+    <ListView
+        android:id="@+id/list_my_customers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below= "@id/my_customers"
+        android:padding="20dp"/>
+
+</RelativeLayout>

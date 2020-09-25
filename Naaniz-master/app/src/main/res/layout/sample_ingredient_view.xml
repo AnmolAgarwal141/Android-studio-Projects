@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="?android:attr/windowBackground">
+
+        <Button
+            android:id="@+id/btn_vendor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/add_button" />
+
+        <TextView
+            android:id="@+id/ingredient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="Butter"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAppearance="@style/onion" />
+
+        <TextView
+            android:id="@+id/ingredient_qty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:gravity="center_vertical|end"
+            android:textSize="20sp"
+            android:layout_marginRight="14dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/onion"
+            android:text="200" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/vendor_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="100"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/windowBackground"
+        android:text="Vendor List"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/onion"
+        android:visibility="visible" />
+
+</LinearLayout>

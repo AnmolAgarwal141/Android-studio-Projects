@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sub_location">
+        <item>AS Rao Nagar &amp; Sainikpuri</item>
+        <item>Himayath Nagar</item>
+        <item>Kompally</item>
+    </string-array>
+</resources>

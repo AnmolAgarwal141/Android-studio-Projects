@@ -7,4 +7,5 @@
     <color name="startGcolor">#3a1c71</color>
     <color name="centerGcolor">#d76d77</color>
     <color name="endGcolor">#ffaf7b</color>
+    <color name="orangebutton">#ff7500</color>
 </resources>

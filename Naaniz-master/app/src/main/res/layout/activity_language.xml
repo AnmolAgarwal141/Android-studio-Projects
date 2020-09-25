@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Language">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="236dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:text="@string/select_your"
+        android:textAppearance="@style/select_your"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/english_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/ractangle_3" />
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_alignRight="@id/english_button"
+        android:layout_alignBottom="@id/english_button"
+        android:text="@string/a"
+        android:layout_marginRight="12dp"
+        android:elevation="3dp"
+        android:textAppearance="@style/a"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/english_button"
+        android:layout_alignTop="@id/english_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/english"
+        android:elevation="3dp"
+        android:textAppearance="@style/english"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/english_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/english_button"
+        android:layout_below="@id/english"
+        android:layout_marginLeft="16dp"
+        android:elevation="3dp"
+        android:text="@string/english_"
+        android:textAppearance="@style/english_"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/hindi_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/english_button"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ractangle_31" />
+
+    <TextView
+        android:id="@+id/aa"
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_alignRight="@id/hindi_button"
+        android:layout_alignBottom="@id/hindi_button"
+        android:text="@string/aa"
+        android:layout_marginRight="12dp"
+        android:elevation="3dp"
+        android:textAppearance="@style/a"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/hindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/hindi_button"
+        android:layout_alignTop="@id/hindi_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hindi"
+        android:elevation="3dp"
+        android:textAppearance="@style/english"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/hindi_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/hindi_button"
+        android:layout_below="@id/hindi"
+        android:layout_marginLeft="16dp"
+        android:elevation="3dp"
+        android:text="@string/hindi_"
+        android:textAppearance="@style/english_"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/gujarati_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/hindi_button"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ractangle_32" />
+
+    <TextView
+        android:id="@+id/g"
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_alignRight="@id/gujarati_button"
+        android:layout_alignBottom="@id/gujarati_button"
+        android:text="@string/ga"
+        android:textSize="80sp"
+        android:layout_marginRight="12dp"
+        android:elevation="3dp"
+        android:textAppearance="@style/a"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/gujarati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gujarati_button"
+        android:layout_alignTop="@id/gujarati_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/gujrati"
+        android:elevation="3dp"
+        android:textAppearance="@style/english"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/gujarati_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gujarati_button"
+        android:layout_below="@id/gujarati"
+        android:layout_marginLeft="16dp"
+        android:elevation="3dp"
+        android:text="@string/gujarati_"
+        android:textAppearance="@style/english_"
+        android:gravity="top" />
+
+</RelativeLayout>

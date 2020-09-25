@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".My_menu_vendor">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:background="@android:color/white">
+           <Button
+               android:id="@+id/backButton"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:background="@drawable/back_button"
+               android:layout_weight="0.1"
+               />
+
+           <TextView
+               android:id="@+id/my_menu"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/my_menu"
+               android:textAppearance="@style/my_menu"
+               android:textSize="25sp"
+               android:layout_weight="3"
+
+              />
+
+           <androidx.appcompat.widget.SwitchCompat
+               android:id="@+id/food_choice_add"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/veg"
+               android:textOff="@string/veg"
+               android:textOn="@string/non_veg"
+               android:textSize="16sp"
+               android:theme="@style/food_switch_style"
+               android:layout_weight="0.5"
+             />
+       </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@android:color/black"
+            android:background="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

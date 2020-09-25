@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="Price_Bar">
+    <item>10–50</item>
+    <item>51–100</item>
+    <item>101–200</item>
+    <item>201–300</item>
+</string-array>
+</resources>

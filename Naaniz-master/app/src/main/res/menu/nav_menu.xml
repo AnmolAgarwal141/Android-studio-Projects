@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home" android:title="Home" />
+    <item android:id="@+id/user_recipes" android:title="User Recipes"/>
+    <item android:id="@+id/redirect" android:title="Restaurants"/>
+    <item android:id="@+id/temp_recipe" android:title="Temp Recipe Fetch"/>
+    <item android:id="@+id/profile" android:title="Profile"/>
+    <item android:id="@+id/settings" android:title="Settings"/>
+    <item android:id="@+id/log_out" android:title="Log out"/>
+    <item android:id="@+id/find_recipe" android:title="Find Recipe"/>
+    <item android:id="@+id/youtube" android:title="YouTube Trending"/>
+</menu>

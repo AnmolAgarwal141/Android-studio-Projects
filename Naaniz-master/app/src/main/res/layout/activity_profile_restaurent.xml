@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileRestaurent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="18dp"
+        android:elevation="10dp"
+        android:background="@drawable/boarder_image_view"/>
+
+    <TextView
+        android:id="@+id/mark_antony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="34dp"
+        android:text="Mark Antony"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/mark_antony"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="124dp"
+        android:layout_below="@id/mark_antony"
+        android:text="+91 8011696701"
+        android:textStyle="bold"
+        android:textAppearance="@style/mark_antony"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="-1"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="34dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="-30dp"
+        android:layout_above="@id/payments"
+        android:background="@drawable/design_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/payments"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/profile_pic">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Payments"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rewards"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/payments">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Give rewards"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_invites"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/rewards">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Send invites"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/send_invites">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/settings">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Help"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/help">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:text="Sign Out"
+            android:textSize="20sp"
+            android:textAppearance="@style/mark_antony" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="-1"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/design_bar"/>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bot_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_orange_dark"
+        app:itemBackground="@android:color/holo_orange_dark"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bot_newhome_menu" />
+
+</RelativeLayout>

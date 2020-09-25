@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PastOrdersFragment">
+
+    <ListView
+        android:id="@+id/list_customers_past"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_past"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/time_of_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3:00 PM"
+                style="@style/pm"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order 01"
+                android:layout_alignParentEnd="true"
+                style="@style/pm"
+                android:layout_marginEnd="25dp"/>
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item_name"
+                android:text="Item Name"
+                android:layout_below="@id/time_of_order"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/item_name"
+                android:layout_toStartOf="@id/item_price"
+                style="@style/item_name"
+                android:text="Quantity"
+                android:gravity="center"
+                android:layout_below="@id/time_of_order"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item_name"
+                android:text="Price"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="35dp"
+                android:layout_below="@id/time_of_order"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/items_list"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_marginTop="20dp"
+                style="@style/shahi_panee"
+                android:text="Paneer Butter Masala\n\nShahi Paneer"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:id="@+id/quantities_list"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_toRightOf="@id/item_name"
+                android:layout_marginTop="20dp"
+                style="@style/shahi_panee"
+                android:text="10\n\n20"
+                android:layout_marginStart="90dp"/>
+
+            <TextView
+                android:id="@+id/prices_list"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                style="@style/shahi_panee"
+                android:text="Rs. 140\n\nRs.980"
+                android:layout_marginEnd="17dp"/>
+
+            <ImageView
+                android:id="@+id/design_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/design_bar"
+                android:layout_below="@id/items_list"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/design_bar"
+                android:layout_marginTop="10dp"
+                style="@style/shahi_panee"
+                android:text="Total"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/design_bar"
+                android:layout_alignParentRight="true"
+                style="@style/shahi_panee"
+                android:layout_marginTop="10dp"
+                android:text="Rs. 2580"
+                android:layout_marginEnd="17dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/design_bar"
+                android:layout_below="@id/total_amount"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/mark_as_done"
+        android:visibility="gone"
+        android:layout_below="@+id/card_view_past"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confirm_button"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="50dp"
+        android:text="Mark as Done" />
+
+</RelativeLayout>

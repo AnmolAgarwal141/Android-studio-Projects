@@ -2,6 +2,7 @@ package com.example.self;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,6 +25,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,6 +41,8 @@ public class JournalListActivity extends AppCompatActivity {
     private StorageReference storageReference;
     private List<Journal> journalList;
     private RecyclerView recyclerView;
+    public Button deletebutton;
+
     private JournalRecyclerAdapter journalRecyclerAdapter;
     private CollectionReference collectionReference=db.collection("Journal");
     private TextView noJournalentry;
@@ -55,6 +60,23 @@ public class JournalListActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        deletebutton=findViewById(R.id.deltebutton);
+        deletebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(int i=0;i<journalList.size();){
+                    if(journalList.get(i).isSelected()){
+                        journalList.remove(i);
+                        journalRecyclerAdapter.notifyItemRemoved(i);
+                        journalRecyclerAdapter.notifyItemRangeChanged(i,journalList.size());
+
+                    }
+                    else {
+                        i++;
+                    }
+                }
+            }
+        });
     }
 
     @Override

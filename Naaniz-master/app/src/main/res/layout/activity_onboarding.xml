@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Onboarding">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/spring_dots_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dampingRatio="1"
+        app:dotsColor="#FF8E3C"
+        app:dotsStrokeColor="#FF8E3C"
+        app:dotsCornerRadius="2dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="6dp"
+        app:dotsStrokeWidth="2dp"
+        app:stiffness="100"
+        android:layout_marginTop="-305dp"
+        android:layout_marginStart="130dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="74dp"
+        android:layout_height="31dp"
+        android:text="@string/Next"
+        android:background="@drawable/rectangle2"
+        style="@style/next"
+        android:layout_gravity="center"
+        android:layout_marginTop="310dp"
+        />
+
+</LinearLayout>

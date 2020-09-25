@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Naaniz</string>
+    <string name="choose_language">कृपया एक भाषा चुनें:</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="gujrati">गुजराती</string>
+    <string name="hello">नमस्ते दुनिया!</string>
+    <string name="sign_up">साइन अप करें:</string>
+    <string name="Name">नाम</string>
+    <string name="sign_up_phone">"फोन नंबर "</string>
+    <string name="sign_up_pass">"पास वर्ड "</string>
+    <string name="sign_up_repass">पासवर्ड फिर</string>
+    <string name="Next">आगे</string>
+</resources>

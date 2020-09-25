@@ -11,6 +11,8 @@ public class Journal {
     private String userid;
     private String username;
     private Timestamp timeadded;
+    private boolean isSelected=false;
+    public boolean showcheckbox=false;
 
     public Journal(){}
 
@@ -20,6 +22,12 @@ public class Journal {
 
     public void setTitle(String title) {
         Title = title;
+    }
+    public void setSelected(boolean selected){
+        isSelected=selected;
+    }
+    public Boolean isSelected(){
+        return isSelected;
     }
 
     public String getThought() {
